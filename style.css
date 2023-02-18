@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(172, 77%, 51%);
+}
+
+.slider {
+    width: 1384px;
+    height: 1080px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 700%;
+    height: 1080px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 1384px;
+    height: 1080px;
+}
+
+/* I think you can change the width to be equal to the original*/
+
+.navigation-manual {
+    position: absolute;
+    width: 1384px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #000000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #000000;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+
+#radio6:checked ~ .first {
+    margin-left: -100%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 1384px;
+    justify-content: center;
+    margin-top: 1040px; 
+}
+
+.navigation-auto div {
+    border: 2px solid #000000;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #000000;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #000000;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #000000;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #000000;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background: #000000;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6 {
+    background: #000000;
+}
+/* Testing */
+
+.container {
+    
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.sidebar {
+    float: left;
+    width: 536px;
+    height: 1080px;
+    border: 2px solid green;
+}
+
+.slider {
+    float: right;
+}
+
+.info1, .info2, .info3, .info4, .info5, .info6 {
+    border: 2px solid red;
+}
+
+.sidebar h2 {
+    height: 60px;
+    margin: 0;
+}
+
+.sidebar p {
+    height: 136px;
+    border: 2px solid orange;
+    margin: 0;
+}
+.header {
+    border: 2px solid blue;
+}
+
+.info1 p, .info2 p, .info3 p, .info4 p, .info5 p {
+    display: none;
+}
